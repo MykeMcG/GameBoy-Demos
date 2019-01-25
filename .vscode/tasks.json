@@ -1,0 +1,12 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+      {
+          "label": "Build",
+          "type": "shell",
+          "command": "cd src && rgbasm -o ../build/hello_world.obj hello_world.asm && rgblink -o ../build/hello_world.gb ../build/hello_world.obj && rgbfix -v -p0 ../build/hello_world.gb && rgbasm -o ../build/scroll.obj scroll.asm && rgblink -o ../build/scroll.gb ../build/scroll.obj && rgbfix -v -p0 ../build/scroll.gb"
+      }
+  ]
+}
